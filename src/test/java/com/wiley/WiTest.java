@@ -27,7 +27,7 @@ public class WiTest {
     public void setUp() throws Exception {
         driver = new FirefoxDriver();
         baseUrl = "http://dhclinicappv2stg.item-soft.co.il/Login.aspx";
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(8, TimeUnit.SECONDS);
     }
 
     @Test
@@ -114,10 +114,10 @@ public class WiTest {
         Log.info("11. passed: “Home” link at the top navigation menu is clicked");
 //12
         driver.findElement(By.linkText("Institutions")).click();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         List<String> tabs = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(1));
-        Thread.sleep(3000);
+        Thread.sleep(4000);
         assertEquals(driver.getTitle(), "Higher Ed Services and Solutions | Wiley Education Services");
         Log.info("12. passed: the page is opened in new tab");
     }
