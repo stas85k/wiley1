@@ -8,6 +8,8 @@ import org.openqa.selenium.WebDriver;
 public abstract class Page {
 
   protected WebDriver driver;
+  public String PAGE_URL;
+  public String PAGE_TITLE;
 
   /*
    * Constructor injecting the WebDriver interface
